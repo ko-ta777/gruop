@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>入力</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="input.css">
+    <style media="screen">
+        *{
+            margin:auto;
+            max-width: 960px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head_container">
+            <button onclick="location.href='#'" class="button1">履歴</button>   
+        </div>
+    </header>
+    <div class="container">
+        <textarea placeholder="言い訳に使いたい者適当に書いて！"id="Textarea"></textarea>
+        <button  type="submit" class="button2">決定</button>
+    </div>
+
+    <script>
+        document.getElementsByClassName('button2')[0].addEventListener('click', function(){
+            const value = document.getElementById('Textarea').value;
+            localStorage.setItem('value', value);
+            window.location.href = 'https://chat.openai.com/';
+        })
+        /*let button2 = document.getElementsByClassName('button2')
+        button2.addEventListener('click', button2Click);*/
+    </script>
+</body>
+</html>

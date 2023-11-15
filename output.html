@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>出力</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="output.css">
+    </head>
+    <body>
+        <header class="head_container">
+            <button onclick="location.href='input.html'" class="button1">←</button>
+            <div class="output"></div>
+        </header>
+        <div class="container">
+            <button onclick="location.href='#'" class="button2">履歴</button>
+            <div class="img"></div>
+        </div>
+
+        <script>
+            const value = localStorage.getItem('value');
+            document.getElementsByClassName("output").textContent = value;
+            console.log(value);
+        </script>
+    </body>
+</html>
